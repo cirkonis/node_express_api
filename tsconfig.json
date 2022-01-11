@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "Node",
     "target": "es6",
+    "rootDir": "./",
+    "esModuleInterop": true,
     "sourceMap": true
   },
   "exclude": [
