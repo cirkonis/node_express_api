@@ -9,7 +9,7 @@ router.get('/todos/:id', todos.getTodoController);
 
 router.post('/todos', () => console.log('api todos get(list) hit'));
 
-router.put('/todos/:id', () => console.log('api todos put hit'));
+router.put('/todos', todos.updateTodoController);
 
 router.put('/todos/:id', () => console.log('api todos put hit'));
 

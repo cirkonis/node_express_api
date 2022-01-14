@@ -9,6 +9,8 @@ app.get('/api', function (req, res) {
     res.send('Sup, ima express API');
 });
 
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 app.use('/api', router);
 
 app.listen(port, () =>
