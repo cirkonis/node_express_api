@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/todos', todos.listTodosController);
 
-router.get('/todos/:id', () => console.log('api todos get(list) hit'));
+router.get('/todos/:id', todos.getTodoController);
 
 router.post('/todos', () => console.log('api todos get(list) hit'));
 
