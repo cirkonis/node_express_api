@@ -11,6 +11,6 @@ router.post('/todos', todos.createTodoController);
 
 router.put('/todos', todos.updateTodoController);
 
-router.put('/todos/:id', () => console.log('api todos put hit'));
+router.delete('/todos/:id', todos.deleteTodoController);
 
 export default router;
