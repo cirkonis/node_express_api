@@ -1,8 +1,10 @@
 import express from 'express';
-import router from "./routers/todos.router"
+import router from "./routers/todos.router";
+import * as dotenv from "dotenv";
 
 const app = express();
-const port = 5000;
+dotenv.config()
+const port = process.env.PORT;
 
 
 app.get('/api', function (req, res) {
