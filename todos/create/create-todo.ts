@@ -23,4 +23,4 @@ CURRENT_DATE()
 )`
         await mySqlConnection.query(queryString);
         return Promise.resolve(todoToCreate);
-    }
+}

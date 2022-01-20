@@ -11,13 +11,8 @@ JOIN Status status on T.status = status.id
 JOIN Category category on category.id = T.category
 JOIN User assignee on assignee.email = T.assignee
 JOIN User assigned on assigned.email = T.assigned`;
-    try {
         // @ts-ignore
         results = await mySqlConnection.query(queryString);
-        await mySqlConnection.end();
-    }catch (err) {
-        console.error(err)
-    }
         for(const result of results) {
             todosList.push({
                 id: result.id,

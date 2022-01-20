@@ -14,13 +14,7 @@ JOIN User assignee on assignee.email = T.assignee
 JOIN User assigned on assigned.email = T.assigned
 WHERE T.id = '${todoId}'
 `;
-    try {
         result = await mySqlConnection.query(queryString);
-        console.log(result);
-        await mySqlConnection.end();
-    }catch (err) {
-        console.error(err)
-    }
         todo = {
             id: result[0].id,
             title: result[0].title,
