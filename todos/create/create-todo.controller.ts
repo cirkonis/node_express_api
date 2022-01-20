@@ -3,6 +3,10 @@ import {ITodo} from "../../interfaces/ITodo";
 import {createTodo} from "./create-todo";
 
 export async function createTodoController(req: Request, res: Response) {
-    const todo: ITodo = await createTodo(req.body);
-    res.send({data: todo});
+    try {
+        const todo: ITodo = await createTodo(req.body);
+        res.send(todo);
+    } catch(err){
+        res.send(500, {message: 'stuff is busted'});
+    }
 }
