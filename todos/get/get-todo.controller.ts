@@ -1,7 +1,6 @@
 import { Request, Response } from 'express'
 import {ITodo} from "../../interfaces/ITodo";
 import {getTodo} from "./get-todo";
-import mySqlConnection from "../../mysql/mysql-connection";
 
 export async function getTodoController(req: Request, res: Response) {
     try {
