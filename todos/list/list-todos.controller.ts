@@ -4,7 +4,8 @@ import {listTodos} from "./list-todos";
 
 export async function listTodosController(req: Request, res: Response) {
     try {
-        const todos: ITodo[] = await listTodos();
+        let todos: ITodo[];
+        todos = await listTodos();
         res.send({data: todos});
     }catch (err) {
         console.error(err);

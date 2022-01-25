@@ -2,7 +2,7 @@ import {ITodo} from "./interfaces/ITodo";
 import {ECategories} from "./enums/ECategories";
 import {EStatuses} from "./enums/EStatuses";
 
-export const todos: ITodo[] =
+export let todos: ITodo[] =
     [
         {
             id: "4de1aec9-58b7-4656-8256-db9ab55515af",
