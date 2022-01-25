@@ -27,8 +27,8 @@ JOIN User assigned on assigned.email = T.assigned`;
                     name: result.assigned_name,
                     email: result.assigned_email,
                 },
-                dateAdded: "date",
-                dateCompleted: "date"
+                dateAdded: result.date_added,
+                dateCompleted: result.date_completed
             })
         }
                 return Promise.resolve(todosList);
