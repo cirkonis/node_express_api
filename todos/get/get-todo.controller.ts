@@ -1,13 +1,9 @@
-import { Request, Response } from 'express'
+import {NextFunction, Request, Response} from 'express'
 import {ITodo} from "../../interfaces/ITodo";
 import {getTodo} from "./get-todo";
+import TodoNotFoundException from "../../exceptions/TodoNotFoundException";
 
-export async function getTodoController(req: Request, res: Response) {
-    try {
+export async function getTodoController(req: Request, res: Response, next: NextFunction) {
         const todo: ITodo = await getTodo(req.params.id);
-        res.send({data: todo});
-    } catch (err){
-        console.error(err);
-        res.send(500, {message: "Stuff is busted"});
-    }
+        todo ? res.send({data: todo}) : next(new TodoNotFoundException(req.params.id));
 }
