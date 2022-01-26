@@ -1,4 +1,5 @@
-import {ITodo} from "../../interfaces/ITodo";
+// @ts-ignore
+import {ITodo} from "../../../shared/interfaces/ITodo";
 import mySqlConnection from "../../mysql/mysql-connection";
 
 export async function listTodos(): Promise<ITodo[]>{
