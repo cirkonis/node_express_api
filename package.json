@@ -2,7 +2,7 @@
   "name": "node_express_api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "dist/app.js",
   "scripts": {
     "dev-start": "ts-node app.ts",
     "build": "tsc",

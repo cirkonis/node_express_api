@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
-import {ITodo} from "../../interfaces/ITodo";
+// @ts-ignore
+import {ITodo} from ".//shared/interfaces/ITodo";
 import {listTodos} from "./list-todos";
 
 export async function listTodosController(req: Request, res: Response) {
