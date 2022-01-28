@@ -1,4 +1,4 @@
-import {ITodo} from "../../../shared/interfaces/ITodo";
+import {ITodo} from "../../interfaces/ITodo";
 import { v4 as uuidv4 } from 'uuid';
 import mySqlConnection from "../../mysql/mysql-connection";
 

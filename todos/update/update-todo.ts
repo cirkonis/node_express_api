@@ -1,4 +1,4 @@
-import {ITodo} from "../../../shared/interfaces/ITodo";
+import {ITodo} from "../../interfaces/ITodo";
 import mySqlConnection from "../../mysql/mysql-connection";
 
 export async function updateTodo(todo: ITodo): Promise<{message: string}>{

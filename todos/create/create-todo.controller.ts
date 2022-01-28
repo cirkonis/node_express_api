@@ -1,5 +1,5 @@
 import {Request, Response} from 'express'
-import {ITodo} from "../../../shared/interfaces/ITodo";
+import {ITodo} from "../../interfaces/ITodo";
 import {createTodo} from "./create-todo";
 
 export async function createTodoController(req: Request, res: Response) {
