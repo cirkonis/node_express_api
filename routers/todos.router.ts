@@ -1,16 +1,16 @@
 import express from 'express';
 import * as todos from '../todos/index';
 
-const router = express.Router();
+const todosRouter = express.Router();
 
-router.get('/todos', todos.listTodosController);
+todosRouter.get('/todos', todos.listTodosController);
 
-router.get('/todos/:id', todos.getTodoController);
+todosRouter.get('/todos/:id', todos.getTodoController);
 
-router.post('/todos', todos.createTodoController);
+todosRouter.post('/todos', todos.createTodoController);
 
-router.put('/todos', todos.updateTodoController);
+todosRouter.put('/todos', todos.updateTodoController);
 
-router.delete('/todos/:id', todos.deleteTodoController);
+todosRouter.delete('/todos/:id', todos.deleteTodoController);
 
-export default router;
+export default todosRouter;
