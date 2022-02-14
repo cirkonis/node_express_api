@@ -1,5 +1,6 @@
 import express from 'express';
 import router from "./routers/todos.router";
+import invitesRouter from './routers/invites.router'
 import * as dotenv from "dotenv";
 import cors from 'cors';
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use('/api', router);
+app.use('/secret', invitesRouter);
 
 app.listen(port, () =>
     {console.log(`app running on port ${port}`)}
