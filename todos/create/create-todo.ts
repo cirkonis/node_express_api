@@ -1,6 +1,6 @@
-import {ITodo} from "../../../shared/interfaces/ITodo";
 import { v4 as uuidv4 } from 'uuid';
 import mySqlConnection from "../../mysql/mysql-connection";
+import {ITodo} from "../../interfaces/ITodo";
 
 let todoToCreate: ITodo;
     export async function createTodo(todo: ITodo): Promise<ITodo> {

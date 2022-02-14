@@ -1,5 +1,5 @@
-import {ITodo} from "../../../shared/interfaces/ITodo";
 import mySqlConnection from "../../mysql/mysql-connection";
+import {ITodo} from "../../interfaces/ITodo";
 
 let todo: ITodo;
 let result: any;

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
-import {ITodo} from "../../../shared/interfaces/ITodo";
 import {getTodo} from "./get-todo";
+import {ITodo} from "../../interfaces/ITodo";
 
 export async function getTodoController(req: Request, res: Response) {
     try {

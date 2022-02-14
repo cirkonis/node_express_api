@@ -1,5 +1,5 @@
-import {ITodo} from "../../../shared/interfaces/ITodo";
 import mySqlConnection from "../../mysql/mysql-connection";
+import {ITodo} from "../../interfaces/ITodo";
 
 export async function updateTodo(todo: ITodo): Promise<{message: string}>{
     const statusId = await mySqlConnection.query(`SELECT Status.id as status_id from Status where Status.status = '${todo.status}';`)
